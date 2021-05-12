@@ -23,7 +23,7 @@ new Vue({
     el: "#app",
     data: {
         // Creo un array vuoto
-        dischi:[]
+        dischi: []
     },
     mounted() {
         // Utilizzo axios per estrarre i dati e faccio un console log dell'oggetto
@@ -32,7 +32,10 @@ new Vue({
                 this.dischi = resp.data.response;
 
                 console.log(this.dischi);
-
+                // Utilizzo il sort per ordinare gli album dal più recente al meno recente
+                this.dischi.sort(function (a, b) {
+                    return b.year - a.year
+                })
             })
     }
 })
