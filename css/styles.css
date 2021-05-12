@@ -14,6 +14,13 @@ body {
   height: 100vh;
 }
 
+.my_albums {
+  text-align: center;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 .albums-container {
   width: 100%;
   overflow: auto;

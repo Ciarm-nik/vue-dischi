@@ -1,11 +1,38 @@
+Descrizione:
+// Attraverso una chiamata ajax all’API di boolean https://flynn.boolean.careers/exercises/api/array/music avremo a disposizione una decina di dischi musicali. Utilizzando vue, stampiamo a schermo una card per ogni album.
+// BONUS:
+// Creare una select con tutti i generi dei dischi. In base a cosa scegliamo nella select, vedremo i corrispondenti cd.
+
+// BONUS 2: Ordinare i dischi per anno di uscita.
+
+
+
+// Ricavo le chiavi dal software postman:
+
+// Esempio album:
+// {
+//     "poster": "https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg",
+//     "title": "New Jersey",
+//     "author": "Bon Jovi",
+//     "genre": "Rock",
+//     "year": "1988"
+// },
+
+
 new Vue({
     el: "#app",
-    mounted(){
+    data: {
+        // Creo un array vuoto
+        dischi:[]
+    },
+    mounted() {
+        // Utilizzo axios per estrarre i dati e faccio un console log dell'oggetto
         axios.get("https://flynn.boolean.careers/exercises/api/array/music")
-        .then((resp) => {
+            .then((resp) => {
+                this.dischi = resp.data.response;
 
-           const albumsList = resp.data.response;
+                console.log(this.dischi);
 
-        })
+            })
     }
 })

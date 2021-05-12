@@ -8,37 +8,37 @@
     <title>Vue Music Discs</title>
 
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Script axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Script vue -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 </head>
 
 <body>
     <div id="app">
 
-        <h1>My albums</h1>
+        <h1 class="my_albums">My albums</h1>
 
         <div class="albums-container">
-            <div class="album">
+            <!-- Creo un ciclo for per ricavare le chiavi in vue -->
+            <div class="album" v-for="disco in dischi">
 
                 <!-- Copertina -->
-                <img src="https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg" alt="">
+                <img :src="disco.poster" alt="">
 
                 <!-- Titolo album -->
-                <h3>Titolo album</h3>
+                <h3>{{disco.title}}</h3>
 
                 <!-- Nome Artista -->
-                <h4>Nome artista</h4>
+                <h4>{{disco.author}}</h4>
 
                 <!-- Anno album -->
-                <span>2021</span>
+                <span>{{disco.year}}</span>
             </div>
         </div>
-
-
-
-
     </div>
 
     <script src="scripts/app.js"></script>
 </body>
+
 </html>
