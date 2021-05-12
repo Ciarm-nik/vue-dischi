@@ -32,7 +32,9 @@ new Vue({
                 this.dischi = resp.data.response;
 
                 console.log(this.dischi);
-                // Utilizzo il sort per ordinare gli album dal più recente al meno recente
+
+                
+                // Utilizzo il sort per ordinare gli album dal più recente al meno recente utilizzando prima b e poi a(per ottenere il risultato opposto devo invertire nel return a e b)
                 this.dischi.sort(function (a, b) {
                     return b.year - a.year
                 })

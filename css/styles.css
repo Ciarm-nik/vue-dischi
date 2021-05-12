@@ -6,6 +6,7 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: black;
 }
 
 #app {
@@ -18,7 +19,8 @@ body {
   text-align: center;
   padding-bottom: 10px;
   padding-top: 20px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
 }
 
 .albums-container {
@@ -28,6 +30,7 @@ body {
   flex-wrap: wrap;
   align-items: flex-start;
   flex-grow: 1;
+  background-color: lightslategray;
 }
 
 .album {
